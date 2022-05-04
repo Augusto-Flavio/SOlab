@@ -1,0 +1,14 @@
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.content-choice-simulator {
+  margin-top: 60px;
+  background-color: #26002D;
+  text-align: center;
+  width: 78%;
+  color: white;
+  height: 100vh;
+  padding-bottom: 40px;
+}
