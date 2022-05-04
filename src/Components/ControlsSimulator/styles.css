@@ -1,0 +1,22 @@
+.bottom-bar {
+  position: absolute;
+  bottom: 0px;
+  min-height: 70px;
+  width: 100%;
+  color: green;
+  background-color: #000000;
+}
+
+.export {
+  width: 100%;
+  background-color: #228200;
+  border: none;
+  height: 50px;
+  color: white;
+  font-weight: bold;
+  font-size: 25px;
+  width: 150px;
+  border-radius: 10px;
+  padding: 10px;
+  margin-left: 63px;
+}

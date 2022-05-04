@@ -1,0 +1,16 @@
+.image {
+  cursor: pointer;
+  margin: 30px;
+  height: 200px;
+  border: 3px solid white;
+  border-radius: 20px;
+}
+
+.image:hover {
+  border: 3px solid green;
+}
+
+.title-option-grid {
+  margin-top: -20px;
+  font-size: 20px;
+}

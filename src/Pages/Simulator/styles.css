@@ -1,0 +1,9 @@
+.show-local {
+  font-size: 30px;
+  text-align: center;
+  color: white;
+}
+
+.show-local span:first-child {
+  color: green;
+}
