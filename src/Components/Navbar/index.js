@@ -6,12 +6,13 @@ export default function Home() {
 
     <div className='navbar'>
       <div className='logo'>
-        SO<span>lab</span>
+        <a href="/">SO<span>lab</span></a>
       </div>
 
       <div className='itens'>
         <a href='/about'>Sobre</a>
         <a href='/contact'>Contato</a>
+        <a href='/login'>Login</a>
       </div>
     </div>
   )
