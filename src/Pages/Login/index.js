@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
+import StorageContext from '../../Components/Store/Context';
 import './styles.css';
 import Navbar from '../../Components/Navbar/index';
 import { useNavigate } from "react-router-dom";
@@ -6,8 +7,11 @@ import api from "../../Services/api";
 
 export default function Login() {
   const [lista, setLista] = useState([]);
+
   const [login_email, setLoginEmail] = useState('');
   const [login_senha, setLoginSenha] = useState('');
+  const {setToken} = useContext(StorageContext);
+  
   const [id, setId] = useState('');
   const [nome, setNome] = useState('');
   const [email, setEmail] = useState('');
@@ -32,10 +36,18 @@ export default function Login() {
     });
   }
 
-  function validarLogin(){    
-    if (lista.some(i => i['email'] === login_email && i['senha'] === login_senha)){
-      // navigate('/profile');
-      alert('logado');
+  function validarLogin(){
+    let login_id;    
+    if (lista.some(i => {
+      if (i['email'] === login_email && i['senha'] === login_senha){
+        login_id = i['id'];
+        return true;
+      }
+    })){
+      // alert("logado");
+      setToken(login_id);
+      navigate('/profile');
+      // return {token: i['id']};
     } else if (lista.some(i => i['email'] === login_email && i['senha'] !== login_senha)){
       alert('Senha incorreta.');
     } else{
@@ -48,7 +60,7 @@ export default function Login() {
       alert("Não deixe campos vazios.");
     } else if (lista.some(i => i['email'] === email)){
       alert("Este endereço de e-mail já está cadastrado.");
-    } else if (csenha.length < 8){
+    } else if (senha.length < 8){
       alert("A senha precisa possuir no mínimo 8 caracteres.");
     } else if (senha !== csenha){
       alert("As senhas não coincidem.");
@@ -56,9 +68,9 @@ export default function Login() {
       let data = {id, nome, email, senha};
       await api.post('/usuarios', data);
       gerarId();
-      await api.get('/usuarios').then(res => {
-        console.log(res.data);
-      });
+      // await api.get('/usuarios').then(res => {
+      //   console.log(res.data);
+      // });
     }
   }
 

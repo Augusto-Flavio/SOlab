@@ -16,6 +16,10 @@
 
 .col{
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
 }
 
 form{
@@ -40,11 +44,12 @@ form{
   text-indent: 5pt;
 }
 
-.title {
+.nome-usuario{
+  text-align: center;
   margin-top: 40px;
   font-weight: bold;
   font-size: 48px;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 
 .subtitle {

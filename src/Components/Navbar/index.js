@@ -12,7 +12,7 @@ export default function Home() {
       <div className='itens'>
         <a href='/about'>Sobre</a>
         <a href='/contact'>Contato</a>
-        <a href='/login'>Login</a>
+        {<a href={localStorage.getItem('token')? '/profile': '/login'}>Login</a>}
       </div>
     </div>
   )
