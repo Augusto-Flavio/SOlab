@@ -3,27 +3,58 @@
   justify-content: center;
 }
 
-.conteudo {
-  padding-top: 50px;
+.content {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   margin-top: 60px;
   background-color: #26002D;
-  text-align: center;
   width: 78%;
   color: white;
   height: 100vh;
   margin-bottom: 40px;
 }
 
-.title {
+.col{
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.formItem{
+  display: flex;
+  width: min-content;
+  flex-direction: column;
+  text-align: left;
+  gap: 5px;
+  font-size: 18pt;
+}
+
+.caixa-de-texto{
+  height: 30px;
+  font-size: 14pt;
+  text-indent: 5pt;
+}
+
+.nome-usuario{
+  text-align: center;
   margin-top: 40px;
   font-weight: bold;
   font-size: 48px;
+  margin-bottom: 50px;
 }
 
 .subtitle {
-  margin: 0 50px;
+  margin: 0 70px;
+  margin-top: 50px;
   font-size: 25px;
 }
 
@@ -34,7 +65,6 @@
 .buttons-area button {
   cursor: pointer;
   border: none;
-  margin: 10px;
   padding: 10px;
   border-radius: 10px;
   color: white;

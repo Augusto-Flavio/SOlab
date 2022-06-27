@@ -10,7 +10,7 @@ export default function Home() {
     <div>
       <Navbar />
       <div className='center'>
-        <div className='content'>
+        <div className='conteudo'>
           <div className='title'>Laboratório de Sistemas Operacionais</div>
           <div className='subtitle'>
             SOlab é um simulador gráfico de sistemas operacionais para auxiliar estudantes
